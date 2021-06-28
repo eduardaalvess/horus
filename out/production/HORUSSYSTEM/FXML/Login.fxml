@@ -37,7 +37,7 @@
                 <Font name="System Italic" size="16.0" />
             </font>
         </Button>
-        <Label fx:id="wrongLogin" layoutX="278.0" layoutY="342.0" prefHeight="17.0" prefWidth="166.0" textAlignment="CENTER" textFill="#ffc401">
+        <Label fx:id="wrongLogin" alignment="CENTER" layoutX="211.0" layoutY="348.0" prefHeight="17.0" prefWidth="300.0" textAlignment="CENTER" textFill="#ffc401">
             <font>
                 <Font name="Candara" size="14.0" />
             </font>

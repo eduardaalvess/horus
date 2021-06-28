@@ -88,7 +88,7 @@ public class LoginController implements Initializable
     @FXML
     public void registerScene(ActionEvent e1) throws IOException
     {
-        userLogin.getScene().getWindow().hide();
+        userRegister.getScene().getWindow().hide();
 
         Stage register = new Stage();
         Parent root = FXMLLoader.load((getClass().getResource("/FXML/Register.fxml")));
