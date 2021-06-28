@@ -107,6 +107,23 @@ public class LoginController implements Initializable
         cancel.close();
     }
 
+    @FXML
+    public void forgetPassScene(ActionEvent e3) throws IOException
+    {
+
+        forgotThePassword.getScene().getWindow().hide();
+
+        Stage forgetPass = new Stage();
+        Parent root = FXMLLoader.load((getClass().getResource("/FXML/PasswordForget.fxml")));
+        forgetPass.setTitle("HORUS - Building yourself up");
+        Image image = new Image("/Imagens/icon-top.png");
+        forgetPass.getIcons().add(image);
+        Scene scene = new Scene(root);
+        forgetPass.setScene(scene);
+        forgetPass.show();
+        forgetPass.setResizable(false);
+    }
+
     public void validateLogin()
     {
         DatabaseConfigs connectNow = new DatabaseConfigs();

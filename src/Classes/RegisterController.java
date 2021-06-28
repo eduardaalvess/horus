@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
@@ -16,6 +17,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import Database.DatabaseConfigs;
 
 public class RegisterController implements Initializable {
 
@@ -79,6 +81,8 @@ public class RegisterController implements Initializable {
 
         pt.play();
 
+
+
     }
 
     @FXML
@@ -113,5 +117,14 @@ public class RegisterController implements Initializable {
         }
 
         return gen;
+    }
+
+    public void validateRegister() {
+
+        DatabaseConfigs connectNow = new DatabaseConfigs();
+        Connection connectDB = connectNow.getConnection();
+
+        String insert = "INSERT INTO usersinfo(name, email, pass, cpf, location, age, height, weight)"
+                + "VALUES (?,?,?,?,?,?,?,?)";
     }
 }

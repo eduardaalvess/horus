@@ -48,7 +48,7 @@
                 <Font name="System Italic" size="14.0" />
             </font>
         </TextField>
-        <Button fx:id="buttonRegister" layoutX="305.0" layoutY="597.0" mnemonicParsing="false" onAction="#registerAction" prefHeight="39.0" prefWidth="90.0" style="-fx-background-color: #ffc401;" text="Cadastrar" textFill="WHITE">
+        <Button fx:id="buttonRegister" layoutX="305.0" layoutY="597.0" mnemonicParsing="false" onAction="#registerAction" prefHeight="39.0" prefWidth="90.0" style="-fx-background-color: #ffc401;" text="Cadastrar">
             <font>
                 <Font name="Candara" size="14.0" />
             </font>
@@ -58,7 +58,7 @@
                 <Font name="System Italic" size="18.0" />
             </font>
         </Label>
-        <Button fx:id="userLogin" layoutX="305.0" layoutY="679.0" mnemonicParsing="false" onAction="#loginAction" prefHeight="39.0" prefWidth="90.0" style="-fx-background-color: #ffc401;" text="Login" textFill="WHITE">
+        <Button fx:id="userLogin" layoutX="305.0" layoutY="679.0" mnemonicParsing="false" onAction="#loginAction" prefHeight="39.0" prefWidth="90.0" style="-fx-background-color: #ffc401;" text="Login">
             <font>
                 <Font name="Candara" size="14.0" />
             </font>
