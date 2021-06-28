@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="700.0" style="-fx-background-color: #171717;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Classes.RegisterController">
+    <children>
+        <TextField fx:id="userName" layoutX="200.0" layoutY="276.0" prefHeight="30.0" prefWidth="300.0" promptText="Nome">
+            <font>
+                <Font name="System Italic" size="14.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="userEmail" layoutX="200.0" layoutY="320.0" prefHeight="30.0" prefWidth="300.0" promptText="Email">
+            <font>
+                <Font name="System Italic" size="14.0" />
+            </font>
+        </TextField>
+        <PasswordField fx:id="userPassword" layoutX="200.0" layoutY="364.0" prefHeight="30.0" prefWidth="300.0" promptText="Senha">
+            <font>
+                <Font name="System Italic" size="14.0" />
+            </font>
+        </PasswordField>
+        <TextField fx:id="userCPF" layoutX="200.0" layoutY="406.0" prefHeight="30.0" prefWidth="300.0" promptText="Insira somente números do CPF">
+            <font>
+                <Font name="System Italic" size="14.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="userLocation" layoutX="200.0" layoutY="449.0" prefHeight="30.0" prefWidth="300.0" promptText="Localização">
+            <font>
+                <Font name="System Italic" size="14.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="userAge" layoutX="200.0" layoutY="488.0" prefHeight="30.0" prefWidth="60.0" promptText="Idade">
+            <font>
+                <Font name="System Italic" size="14.0" />
+            </font>
+        </TextField>
+        <TextField fx:id="userHeight" layoutX="396.0" layoutY="488.0" prefHeight="30.0" prefWidth="104.0" promptText="Altura (cm)">
+            <font>
+                <Font name="System Italic" size="14.0" />
+            </font>
+        </TextField>
+        <Button fx:id="buttonRegister" layoutX="305.0" layoutY="597.0" mnemonicParsing="false" onAction="#registerAction" prefHeight="39.0" prefWidth="90.0" style="-fx-background-color: #ffc401;" text="Cadastrar" textFill="WHITE">
+            <font>
+                <Font name="Candara" size="14.0" />
+            </font>
+        </Button>
+        <Label layoutX="267.0" layoutY="645.0" text="Já possui uma conta?" textFill="WHITE">
+            <font>
+                <Font name="System Italic" size="18.0" />
+            </font>
+        </Label>
+        <Button fx:id="userLogin" layoutX="305.0" layoutY="679.0" mnemonicParsing="false" onAction="#loginAction" prefHeight="39.0" prefWidth="90.0" style="-fx-background-color: #ffc401;" text="Login" textFill="WHITE">
+            <font>
+                <Font name="Candara" size="14.0" />
+            </font>
+        </Button>
+        <ImageView fitHeight="250.0" fitWidth="250.0" layoutX="225.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../Imagens/Horus-Logo.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="imageLoad" fitHeight="80.0" fitWidth="80.0" layoutX="310.0" layoutY="718.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../Imagens/load.gif" />
+            </image>
+        </ImageView>
+        <RadioButton fx:id="userMale" layoutX="200.0" layoutY="545.0" mnemonicParsing="false" selected="true" text="Homem" textAlignment="CENTER" textFill="WHITE">
+            <toggleGroup>
+                <ToggleGroup fx:id="genders" />
+            </toggleGroup></RadioButton>
+        <RadioButton fx:id="userWoman" layoutX="311.0" layoutY="545.0" mnemonicParsing="false" text="Mulher" textAlignment="CENTER" textFill="WHITE" toggleGroup="$genders" />
+        <RadioButton fx:id="userOthers" layoutX="424.0" layoutY="545.0" mnemonicParsing="false" text="Outros" textAlignment="CENTER" textFill="WHITE" toggleGroup="$genders" />
+    </children>
+</AnchorPane>
