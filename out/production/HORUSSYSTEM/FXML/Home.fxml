@@ -15,22 +15,22 @@
                   <Image url="@../Imagens/Horus-Logo.png" />
                </image>
             </ImageView>
-            <Button fx:id="homeButton" alignment="CENTER" layoutX="78.0" layoutY="273.0" mnemonicParsing="false" onAction="#homeStage" style="-fx-background-color: #171717;" text="Home" textFill="#ffc401">
+            <Button fx:id="homeButton" alignment="CENTER" layoutX="78.0" layoutY="273.0" mnemonicParsing="false" onAction="#homeStage" style="-fx-background-color: #ffc401;" text="Home" textFill="#171717">
                <font>
                   <Font name="Candara" size="24.0" />
                </font>
             </Button>
-            <Button fx:id="buildingButton" alignment="CENTER" layoutX="68.0" layoutY="338.0" mnemonicParsing="false" style="-fx-background-color: #171717;" text="Building" textFill="#ffc401">
+            <Button fx:id="buildingButton" alignment="CENTER" layoutX="68.0" layoutY="338.0" mnemonicParsing="false" onAction="#buildingAction" style="-fx-background-color: #171717;" text="Building" textFill="#ffc401">
                <font>
                   <Font name="Candara" size="24.0" />
                </font>
             </Button>
-            <Button fx:id="statsButton" alignment="CENTER" layoutX="52.0" layoutY="403.0" mnemonicParsing="false" style="-fx-background-color: #171717;" text="Estatisticas" textFill="#ffc401">
+            <Button fx:id="statsButton" alignment="CENTER" layoutX="52.0" layoutY="403.0" mnemonicParsing="false" onAction="#statsAction" style="-fx-background-color: #171717;" text="Estatisticas" textFill="#ffc401">
                <font>
                   <Font name="Candara" size="24.0" />
                </font>
             </Button>
-            <Button fx:id="configsButton" alignment="CENTER" layoutX="36.0" layoutY="467.0" mnemonicParsing="false" style="-fx-background-color: #171717;" text="Configurações" textFill="#ffc401">
+            <Button fx:id="configsButton" alignment="CENTER" layoutX="36.0" layoutY="467.0" mnemonicParsing="false" onAction="#configsAction" style="-fx-background-color: #171717;" text="Configurações" textFill="#ffc401">
                <font>
                   <Font name="Candara" size="24.0" />
                </font>
