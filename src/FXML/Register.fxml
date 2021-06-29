@@ -73,13 +73,13 @@
                 <Image url="@../Imagens/load.gif" />
             </image>
         </ImageView>
-        <RadioButton fx:id="userMale" layoutX="200.0" layoutY="545.0" mnemonicParsing="false" selected="true" text="Homem" textAlignment="CENTER" textFill="WHITE">
+        <RadioButton fx:id="userMale" layoutX="198.0" layoutY="554.0" mnemonicParsing="false" selected="true" text="Homem" textAlignment="CENTER" textFill="WHITE">
             <toggleGroup>
                 <ToggleGroup fx:id="genders" />
             </toggleGroup></RadioButton>
-        <RadioButton fx:id="userWoman" layoutX="311.0" layoutY="545.0" mnemonicParsing="false" text="Mulher" textAlignment="CENTER" textFill="WHITE" toggleGroup="$genders" />
-        <RadioButton fx:id="userOthers" layoutX="424.0" layoutY="545.0" mnemonicParsing="false" text="Outros" textAlignment="CENTER" textFill="WHITE" toggleGroup="$genders" />
-      <Label fx:id="msgRegister" layoutX="247.0" layoutY="571.0" prefHeight="17.0" prefWidth="206.0" textFill="#ff2c2c">
+        <RadioButton fx:id="userWoman" layoutX="310.0" layoutY="554.0" mnemonicParsing="false" text="Mulher" textAlignment="CENTER" textFill="WHITE" toggleGroup="$genders" />
+        <RadioButton fx:id="userOthers" layoutX="424.0" layoutY="554.0" mnemonicParsing="false" text="Outros" textAlignment="CENTER" textFill="WHITE" toggleGroup="$genders" />
+      <Label fx:id="msgRegister" contentDisplay="CENTER" layoutX="200.0" layoutY="527.0" prefHeight="20.0" prefWidth="300.0" textFill="#ffc401">
          <font>
             <Font size="14.0" />
          </font>

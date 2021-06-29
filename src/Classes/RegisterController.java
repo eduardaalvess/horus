@@ -1,6 +1,6 @@
 package Classes;
 
-import com.mysql.cj.x.protobuf.MysqlxDatatypes;
+
 import javafx.animation.PauseTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -78,15 +78,22 @@ public class RegisterController implements Initializable {
     @FXML
     public void registerAction(ActionEvent even) throws SQLException {
         imageLoad.setVisible(true);
-        validateRegister();
-        PauseTransition pt = new PauseTransition();
-        pt.setDuration(Duration.seconds(3));
-        pt.setOnFinished(event -> {
-            System.out.println("Cadastro realizado com sucesso!");
-        });
 
-        pt.play();
+        if(userEmail.getText().isBlank() == true || userPassword.getText().isBlank() == true) {
+            msgRegister.setText("Não é possivel realizar o cadastro");
+            imageLoad.setVisible(false);
+        } else {
+            validateRegister();
+            imageLoad.setVisible(false);
 
+            PauseTransition pt = new PauseTransition();
+            pt.setDuration(Duration.seconds(3));
+            pt.setOnFinished(event -> {
+                System.out.println("Cadastro realizado com sucesso!");
+            });
+
+            pt.play();
+        }
 
 
     }
@@ -127,33 +134,30 @@ public class RegisterController implements Initializable {
 
     public void validateRegister() {
 
-        DatabaseConfigs connectNow = new DatabaseConfigs();
-        Connection connectDB = connectNow.getConnection();
+            DatabaseConfigs connectNow = new DatabaseConfigs();
+            Connection connectDB = connectNow.getConnection();
 
-        String name = userName.getText();
-        String email = userEmail.getText();
-        String pass = userPassword.getText();
-        String cpf = userCPF.getText();
-        String location = userLocation.getText();
-        String age = userAge.getText();
-        String height = userHeight.getText();
-
-
+            String name = userName.getText();
+            String email = userEmail.getText();
+            String pass = userPassword.getText();
+            String cpf = userCPF.getText();
+            String location = userLocation.getText();
+            String age = userAge.getText();
+            String height = userHeight.getText();
 
 
-        String insertFields = "INSERT INTO usersinfo(name, email, pass, cpf, location, age, height) VALUES ('";
-        String insertValues = name + "','" + email + "','" + pass + "','" + cpf + "','" + location + "','" + age + "','" + height + "')";
-        String insertToRegister = insertFields + insertValues;
+            String insertFields = "INSERT INTO usersinfo(name, email, pass, cpf, location, age, height) VALUES ('";
+            String insertValues = name + "','" + email + "','" + pass + "','" + cpf + "','" + location + "','" + age + "','" + height + "')";
+            String insertToRegister = insertFields + insertValues;
 
-        try {
-            Statement statement = connectDB.createStatement();
-            statement.executeUpdate(insertToRegister);
+            try {
+                Statement statement = connectDB.createStatement();
+                statement.executeUpdate(insertToRegister);
 
-            msgRegister.setText("Sucesso!");
+                msgRegister.setText("Sucesso!");
 
-        } catch (Exception ex)
-        {
-            ex.printStackTrace();
-        }
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
     }
 }

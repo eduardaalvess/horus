@@ -6,9 +6,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
-import javafx.scene.control.Button;
+import javafx.scene.control.*;
 import javafx.scene.Scene;
-import javafx.scene.control.CheckBox;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
@@ -20,9 +19,6 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ResourceBundle;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
 
 public class LoginController implements Initializable
 {
@@ -141,8 +137,27 @@ public class LoginController implements Initializable
                 if(queryResult.getInt(1) == 1)
                 {
                     wrongLogin.setText("Sucesso!");
+                    userLogin.getScene().getWindow().hide();
+
+                    Stage home = new Stage();
+                    Parent root = FXMLLoader.load((getClass().getResource("/FXML/Home.fxml")));
+                    home.setTitle("HORUS - Building yourself up");
+                    Image image = new Image("/Imagens/icon-top.png");
+                    home.getIcons().add(image);
+                    Scene scene = new Scene(root);
+                    home.setScene(scene);
+                    home.show();
+                    home.setResizable(false);
+
                 } else {
+
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setHeaderText(null);
+                    alert.setContentText("Informações inválidas! Verifique suas informações.");
+                    alert.show();
+
                     wrongLogin.setText("Informações inválidas!");
+                    imageLoad.setVisible(false);
                 }
             }
         } catch (Exception ex)
@@ -152,5 +167,7 @@ public class LoginController implements Initializable
 
 
     }
+
+
 
 }
