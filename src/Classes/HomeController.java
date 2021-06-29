@@ -80,7 +80,7 @@ public class HomeController {
         configsButton.getScene().getWindow().hide();
 
         Stage configs = new Stage();
-        Parent root = FXMLLoader.load(getClass().getResource("/FXML/Login.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/FXML/Configs.fxml"));
         configs.setTitle("HORUS - Building yourself up");
         Image image = new Image("/Imagens/icon-top.png");
         configs.getIcons().add(image);

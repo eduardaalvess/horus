@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class StatsController {
+public class ConfigsController {
 
     @FXML
     private Button homeButton;
@@ -27,7 +27,6 @@ public class StatsController {
 
     @FXML
     private Button logoutButton;
-
 
     public void homeStage(ActionEvent e) throws IOException {
 
@@ -107,4 +106,6 @@ public class StatsController {
         login.show();
         login.setResizable(false);
     }
+
 }
+
