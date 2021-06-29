@@ -10,12 +10,14 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import java.io.IOException;
 
 public class RunningAnimation extends Application {
+
 
     final static javafx.scene.image.Image RUN1 = new javafx.scene.image.Image(RunningAnimation.class.getResource("/AnimationsFX/Running/run1.jpg").toString());
     final static javafx.scene.image.Image RUN2 = new javafx.scene.image.Image(RunningAnimation.class.getResource("/AnimationsFX/Running/run2.jpg").toString());
@@ -26,8 +28,8 @@ public class RunningAnimation extends Application {
     final static javafx.scene.image.Image RUN7 = new javafx.scene.image.Image(RunningAnimation.class.getResource("/AnimationsFX/Running/run7.jpg").toString());
     final static javafx.scene.image.Image RUN8 = new javafx.scene.image.Image(RunningAnimation.class.getResource("/AnimationsFX/Running/run8.jpg").toString());
 
-    private Group run;
 
+    private Group run;
 
     @Override
     public void start(Stage animationStage) throws IOException {
@@ -98,14 +100,12 @@ public class RunningAnimation extends Application {
 
         t.play();
 
-        Parent root = FXMLLoader.load((getClass().getResource("/FXML/RunAnimation.fxml")));
-        animationStage.setTitle("HORUS - Building yourself up");
-        Image image = new Image("/Imagens/icon-top.png");
-        animationStage.getIcons().add(image);
-        Scene scene = new Scene(root);
-        animationStage.setScene(scene);
+        animationStage.setScene(new Scene(run, 500, 500));
+        animationStage.setTitle("Teste");
         animationStage.show();
-        animationStage.setResizable(false);
+
+
+
     }
 
     public static void main(String[] args) {
