@@ -15,7 +15,7 @@ public class Main extends Application {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("/FXML/Login.fxml"));
             primaryStage.setTitle("HORUS - Building yourself up");
-            Image image = new Image("/Imagens/icon-top.png");
+            Image image = new Image("/Imagens/Other/icon-top.png");
             primaryStage.getIcons().add(image);
             primaryStage.setScene(new Scene(root, 700, 550));
             primaryStage.setResizable(false);

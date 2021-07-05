@@ -16,14 +16,14 @@ import java.io.IOException;
 public class RunningAnimation extends Application {
 
 
-    final static javafx.scene.image.Image RUN1 = new javafx.scene.image.Image(RunningAnimation.class.getResource("/FXAnimations/AnimationsFX/Running/run1.png").toString());
-    final static javafx.scene.image.Image RUN2 = new javafx.scene.image.Image(RunningAnimation.class.getResource("/FXAnimations/AnimationsFX/Running/run2.png").toString());
-    final static javafx.scene.image.Image RUN3 = new javafx.scene.image.Image(RunningAnimation.class.getResource("/FXAnimations/AnimationsFX/Running/run3.png").toString());
-    final static javafx.scene.image.Image RUN4 = new javafx.scene.image.Image(RunningAnimation.class.getResource("/FXAnimations/AnimationsFX/Running/run4.png").toString());
-    final static javafx.scene.image.Image RUN5 = new javafx.scene.image.Image(RunningAnimation.class.getResource("/FXAnimations/AnimationsFX/Running/run5.png").toString());
-    final static javafx.scene.image.Image RUN6 = new javafx.scene.image.Image(RunningAnimation.class.getResource("/FXAnimations/AnimationsFX/Running/run6.png").toString());
-    final static javafx.scene.image.Image RUN7 = new javafx.scene.image.Image(RunningAnimation.class.getResource("/FXAnimations/AnimationsFX/Running/run7.png").toString());
-    final static javafx.scene.image.Image RUN8 = new javafx.scene.image.Image(RunningAnimation.class.getResource("/FXAnimations/AnimationsFX/Running/run8.png").toString());
+    final static javafx.scene.image.Image RUN1 = new javafx.scene.image.Image(RunningAnimation.class.getResource("/Imagens/Running/run1.png").toString());
+    final static javafx.scene.image.Image RUN2 = new javafx.scene.image.Image(RunningAnimation.class.getResource("/Imagens/Running/run2.png").toString());
+    final static javafx.scene.image.Image RUN3 = new javafx.scene.image.Image(RunningAnimation.class.getResource("/Imagens/Running/run3.png").toString());
+    final static javafx.scene.image.Image RUN4 = new javafx.scene.image.Image(RunningAnimation.class.getResource("/Imagens/Running/run4.png").toString());
+    final static javafx.scene.image.Image RUN5 = new javafx.scene.image.Image(RunningAnimation.class.getResource("/Imagens/Running/run5.png").toString());
+    final static javafx.scene.image.Image RUN6 = new javafx.scene.image.Image(RunningAnimation.class.getResource("/Imagens/Running/run6.png").toString());
+    final static javafx.scene.image.Image RUN7 = new javafx.scene.image.Image(RunningAnimation.class.getResource("/Imagens/Running/run7.png").toString());
+    final static javafx.scene.image.Image RUN8 = new javafx.scene.image.Image(RunningAnimation.class.getResource("/Imagens/Running/run8.png").toString());
 
 
     private Group run;
@@ -111,7 +111,6 @@ public class RunningAnimation extends Application {
     }
 
     public static void main(String[] args) {
-        Application.launch(args);
         launch(args);
     }
 

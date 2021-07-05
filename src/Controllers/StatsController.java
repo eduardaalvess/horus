@@ -36,7 +36,7 @@ public class StatsController {
         Stage home = new Stage();
         Parent root = FXMLLoader.load((getClass().getResource("/FXML/HomePage.fxml")));
         home.setTitle("HORUS - Building yourself up");
-        Image image = new Image("/Imagens/icon-top.png");
+        Image image = new Image("/Imagens/Other/icon-top.png");
         home.getIcons().add(image);
         Scene scene = new Scene(root);
         home.setScene(scene);
@@ -52,7 +52,7 @@ public class StatsController {
         Stage build = new Stage();
         Parent root = FXMLLoader.load(getClass().getResource("/FXML/Build.fxml"));
         build.setTitle("HORUS - Building yourself up");
-        Image image = new Image("/Imagens/icon-top.png");
+        Image image = new Image("/Imagens/Other/icon-top.png");
         build.getIcons().add(image);
         Scene scene = new Scene(root);
         build.setScene(scene);
@@ -68,7 +68,7 @@ public class StatsController {
         Stage stats = new Stage();
         Parent root = FXMLLoader.load(getClass().getResource("/FXML/Stats.fxml"));
         stats.setTitle("HORUS - Building yourself up");
-        Image image = new Image("/Imagens/icon-top.png");
+        Image image = new Image("/Imagens/Other/icon-top.png");
         stats.getIcons().add(image);
         Scene scene = new Scene(root);
         stats.setScene(scene);
@@ -83,7 +83,7 @@ public class StatsController {
         Stage configs = new Stage();
         Parent root = FXMLLoader.load(getClass().getResource("/FXML/Configs.fxml"));
         configs.setTitle("HORUS - Building yourself up");
-        Image image = new Image("/Imagens/icon-top.png");
+        Image image = new Image("/Imagens/Other/icon-top.png");
         configs.getIcons().add(image);
         Scene scene = new Scene(root);
         configs.setScene(scene);
@@ -100,7 +100,7 @@ public class StatsController {
         Stage login = new Stage();
         Parent root = FXMLLoader.load(getClass().getResource("/FXML/Login.fxml"));
         login.setTitle("HORUS - Building yourself up");
-        Image image = new Image("/Imagens/icon-top.png");
+        Image image = new Image("/Imagens/Other/icon-top.png");
         login.getIcons().add(image);
         Scene scene = new Scene(root);
         login.setScene(scene);

@@ -47,7 +47,7 @@ public class ForgetPasswordController {
         Stage login = new Stage();
         Parent root = FXMLLoader.load(getClass().getResource("/FXML/Login.fxml"));
         login.setTitle("HORUS - Building yourself up");
-        Image image = new Image("/Imagens/icon-top.png");
+        Image image = new Image("/Imagens/Other/icon-top.png");
         login.getIcons().add(image);
         Scene scene = new Scene(root);
         login.setScene(scene);

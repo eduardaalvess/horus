@@ -89,7 +89,7 @@ public class LoginController implements Initializable
         Stage register = new Stage();
         Parent root = FXMLLoader.load((getClass().getResource("/FXML/Register.fxml")));
         register.setTitle("HORUS - Building yourself up");
-        Image image = new Image("/Imagens/icon-top.png");
+        Image image = new Image("/Imagens/Other/icon-top.png");
         register.getIcons().add(image);
         Scene scene = new Scene(root);
         register.setScene(scene);
@@ -112,7 +112,7 @@ public class LoginController implements Initializable
         Stage forgetPass = new Stage();
         Parent root = FXMLLoader.load((getClass().getResource("/FXML/PasswordForget.fxml")));
         forgetPass.setTitle("HORUS - Building yourself up");
-        Image image = new Image("/Imagens/icon-top.png");
+        Image image = new Image("/Imagens/Other/icon-top.png");
         forgetPass.getIcons().add(image);
         Scene scene = new Scene(root);
         forgetPass.setScene(scene);
@@ -142,7 +142,7 @@ public class LoginController implements Initializable
                     Stage home = new Stage();
                     Parent root = FXMLLoader.load((getClass().getResource("/FXML/HomePage.fxml")));
                     home.setTitle("HORUS - Building yourself up");
-                    Image image = new Image("/Imagens/icon-top.png");
+                    Image image = new Image("/Imagens/Other/icon-top.png");
                     home.getIcons().add(image);
                     Scene scene = new Scene(root);
                     home.setScene(scene);

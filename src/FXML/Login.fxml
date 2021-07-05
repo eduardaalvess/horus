@@ -49,12 +49,12 @@
         </CheckBox>
         <ImageView fx:id="imageLoad" fitHeight="80.0" fitWidth="80.0" layoutX="309.0" layoutY="460.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../Imagens/load.gif" />
+                <Image url="@../Imagens/Other/load.gif" />
             </image>
         </ImageView>
         <ImageView fx:id="horusImageView" fitHeight="222.0" fitWidth="313.0" layoutX="250.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../Imagens/Horus-Logo.png" />
+                <Image url="@../Imagens/Other/Horus-Logo.png" />
             </image>
         </ImageView>
         <Button fx:id="userRegister" layoutX="36.0" layoutY="461.0" mnemonicParsing="false" onAction="#registerScene" prefHeight="39.0" prefWidth="110.0" style="-fx-background-color: #ffc401;" text="Cadastro">

@@ -65,12 +65,12 @@
         </Button>
         <ImageView fitHeight="250.0" fitWidth="250.0" layoutX="225.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../Imagens/Horus-Logo.png" />
+                <Image url="@../Imagens/Other/Horus-Logo.png" />
             </image>
         </ImageView>
         <ImageView fx:id="imageLoad" fitHeight="80.0" fitWidth="80.0" layoutX="310.0" layoutY="718.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../Imagens/load.gif" />
+                <Image url="@../Imagens/Other/load.gif" />
             </image>
         </ImageView>
         <RadioButton fx:id="userMale" layoutX="198.0" layoutY="554.0" mnemonicParsing="false" selected="true" text="Homem" textAlignment="CENTER" textFill="WHITE">

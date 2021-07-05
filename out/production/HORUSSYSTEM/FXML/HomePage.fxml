@@ -17,7 +17,7 @@
          <children>
             <ImageView fitHeight="300.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../Imagens/Horus-Logo.png" />
+                  <Image url="@../Imagens/Other/Horus-Logo.png" />
                </image>
             </ImageView>
             <Button fx:id="homeButton" mnemonicParsing="false" onAction="#changeSceneHome" prefHeight="50.0" prefWidth="112.0" style="-fx-background-color: #ffd036;" text="Home">
