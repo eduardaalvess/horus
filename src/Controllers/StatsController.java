@@ -1,4 +1,4 @@
-package Classes;
+package Controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -34,7 +34,7 @@ public class StatsController {
         homeButton.getScene().getWindow().hide();
 
         Stage home = new Stage();
-        Parent root = FXMLLoader.load((getClass().getResource("/FXML/Home.fxml")));
+        Parent root = FXMLLoader.load((getClass().getResource("/FXML/HomePage.fxml")));
         home.setTitle("HORUS - Building yourself up");
         Image image = new Image("/Imagens/icon-top.png");
         home.getIcons().add(image);
@@ -50,7 +50,7 @@ public class StatsController {
         buildingButton.getScene().getWindow().hide();
 
         Stage build = new Stage();
-        Parent root = FXMLLoader.load(getClass().getResource("/FXML/BuildYO.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/FXML/Build.fxml"));
         build.setTitle("HORUS - Building yourself up");
         Image image = new Image("/Imagens/icon-top.png");
         build.getIcons().add(image);

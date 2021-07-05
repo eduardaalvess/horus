@@ -1,4 +1,4 @@
-package Classes;
+package Controllers;
 
 import Database.DatabaseConfigs;
 import javafx.animation.PauseTransition;
@@ -140,7 +140,7 @@ public class LoginController implements Initializable
                     userLogin.getScene().getWindow().hide();
 
                     Stage home = new Stage();
-                    Parent root = FXMLLoader.load((getClass().getResource("/FXML/Home.fxml")));
+                    Parent root = FXMLLoader.load((getClass().getResource("/FXML/HomePage.fxml")));
                     home.setTitle("HORUS - Building yourself up");
                     Image image = new Image("/Imagens/icon-top.png");
                     home.getIcons().add(image);

@@ -1,4 +1,4 @@
-package Classes;
+package Controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class HomeController {
+public class BuildYOController {
 
     @FXML
     private Button homeButton;
@@ -28,12 +28,13 @@ public class HomeController {
     @FXML
     private Button logoutButton;
 
+
     public void homeStage(ActionEvent e) throws IOException {
 
         homeButton.getScene().getWindow().hide();
 
         Stage home = new Stage();
-        Parent root = FXMLLoader.load((getClass().getResource("/FXML/Home.fxml")));
+        Parent root = FXMLLoader.load((getClass().getResource("/FXML/HomePage.fxml")));
         home.setTitle("HORUS - Building yourself up");
         Image image = new Image("/Imagens/icon-top.png");
         home.getIcons().add(image);
@@ -49,7 +50,7 @@ public class HomeController {
         buildingButton.getScene().getWindow().hide();
 
         Stage build = new Stage();
-        Parent root = FXMLLoader.load(getClass().getResource("/FXML/BuildYO.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/FXML/Build.fxml"));
         build.setTitle("HORUS - Building yourself up");
         Image image = new Image("/Imagens/icon-top.png");
         build.getIcons().add(image);
@@ -62,17 +63,17 @@ public class HomeController {
     public void statsAction(ActionEvent e1) throws IOException
     {
 
-            statsButton.getScene().getWindow().hide();
+        statsButton.getScene().getWindow().hide();
 
-            Stage stats = new Stage();
-            Parent root = FXMLLoader.load(getClass().getResource("/FXML/Stats.fxml"));
-            stats.setTitle("HORUS - Building yourself up");
-            Image image = new Image("/Imagens/icon-top.png");
-            stats.getIcons().add(image);
-            Scene scene = new Scene(root);
-            stats.setScene(scene);
-            stats.show();
-            stats.setResizable(false);
+        Stage stats = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("/FXML/Stats.fxml"));
+        stats.setTitle("HORUS - Building yourself up");
+        Image image = new Image("/Imagens/icon-top.png");
+        stats.getIcons().add(image);
+        Scene scene = new Scene(root);
+        stats.setScene(scene);
+        stats.show();
+        stats.setResizable(false);
     }
 
     public void configsAction(ActionEvent e1) throws IOException
@@ -106,5 +107,4 @@ public class HomeController {
         login.show();
         login.setResizable(false);
     }
-
 }

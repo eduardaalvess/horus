@@ -1,4 +1,4 @@
-package Classes;
+package Controllers;
 
 
 import javafx.animation.PauseTransition;

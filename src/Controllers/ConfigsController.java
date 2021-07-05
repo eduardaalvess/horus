@@ -1,4 +1,4 @@
-package Classes;
+package Controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class BuildYOController {
+public class ConfigsController {
 
     @FXML
     private Button homeButton;
@@ -28,13 +28,12 @@ public class BuildYOController {
     @FXML
     private Button logoutButton;
 
-
     public void homeStage(ActionEvent e) throws IOException {
 
         homeButton.getScene().getWindow().hide();
 
         Stage home = new Stage();
-        Parent root = FXMLLoader.load((getClass().getResource("/FXML/Home.fxml")));
+        Parent root = FXMLLoader.load((getClass().getResource("/FXML/HomePage.fxml")));
         home.setTitle("HORUS - Building yourself up");
         Image image = new Image("/Imagens/icon-top.png");
         home.getIcons().add(image);
@@ -50,7 +49,7 @@ public class BuildYOController {
         buildingButton.getScene().getWindow().hide();
 
         Stage build = new Stage();
-        Parent root = FXMLLoader.load(getClass().getResource("/FXML/BuildYO.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/FXML/Build.fxml"));
         build.setTitle("HORUS - Building yourself up");
         Image image = new Image("/Imagens/icon-top.png");
         build.getIcons().add(image);
@@ -107,4 +106,6 @@ public class BuildYOController {
         login.show();
         login.setResizable(false);
     }
+
 }
+
