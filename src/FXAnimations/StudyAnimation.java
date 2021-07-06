@@ -135,8 +135,8 @@ public class StudyAnimation extends Application {
         final ImageView study56 = new ImageView(STUDY56);
 
         study = new Group(study1);
-        study.setTranslateX(200);
-        study.setTranslateY(220);
+        study.setTranslateX(-250);
+        study.setTranslateY(0);
 
         Timeline t = new Timeline();
         t.setCycleCount(Timeline.INDEFINITE);
@@ -582,7 +582,7 @@ public class StudyAnimation extends Application {
 
      final Group root = new Group(study);
 
-     animationStage.setScene(new Scene(root, 700, 500));
+     animationStage.setScene(new Scene(root, 850, 600));
      animationStage.setTitle("Teste Study");
      animationStage.show();
 
