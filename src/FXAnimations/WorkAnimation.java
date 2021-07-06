@@ -68,15 +68,15 @@ public class WorkAnimation extends Application {
 
 
         work = new Group(work1);
-        work.setTranslateX(200);
-        work.setTranslateY(220);
+        work.setTranslateX(-150);
+        work.setTranslateY(0);
 
         Timeline t = new Timeline();
         t.setCycleCount(Timeline.INDEFINITE);
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(2000),
+                Duration.millis(500),
                 (ActionEvent event) -> {
                     work.getChildren().setAll(work2);
                 }
@@ -84,7 +84,7 @@ public class WorkAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(4000),
+                Duration.millis(1000),
                 (ActionEvent event) -> {
                     work.getChildren().setAll(work3);
                 }
@@ -92,7 +92,7 @@ public class WorkAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(6000),
+                Duration.millis(2000),
                 (ActionEvent event) -> {
                     work.getChildren().setAll(work4);
                 }
@@ -100,7 +100,7 @@ public class WorkAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(8000),
+                Duration.millis(3000),
                 (ActionEvent event) -> {
                     work.getChildren().setAll(work5);
                 }
@@ -108,7 +108,7 @@ public class WorkAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(10000),
+                Duration.millis(4000),
                 (ActionEvent event) -> {
                     work.getChildren().setAll(work6);
                 }
@@ -116,7 +116,7 @@ public class WorkAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(12000),
+                Duration.millis(5000),
                 (ActionEvent event) -> {
                     work.getChildren().setAll(work7);
                 }
@@ -124,7 +124,7 @@ public class WorkAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(14000),
+                Duration.millis(6000),
                 (ActionEvent event) -> {
                     work.getChildren().setAll(work8);
                 }
@@ -132,7 +132,7 @@ public class WorkAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(16000),
+                Duration.millis(7000),
                 (ActionEvent event) -> {
                     work.getChildren().setAll(work9);
                 }
@@ -141,7 +141,7 @@ public class WorkAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(20000),
+                Duration.millis(8000),
                 (ActionEvent event) -> {
                     work.getChildren().setAll(work10);
                 }
@@ -149,7 +149,7 @@ public class WorkAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(22000),
+                Duration.millis(9000),
                 (ActionEvent event) -> {
                     work.getChildren().setAll(work11);
                 }
@@ -157,7 +157,7 @@ public class WorkAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(24000),
+                Duration.millis(10000),
                 (ActionEvent event) -> {
                     work.getChildren().setAll(work12);
                 }
@@ -165,7 +165,7 @@ public class WorkAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(26000),
+                Duration.millis(11000),
                 (ActionEvent event) -> {
                     work.getChildren().setAll(work13);
                 }
@@ -173,7 +173,7 @@ public class WorkAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(28000),
+                Duration.millis(12000),
                 (ActionEvent event) -> {
                     work.getChildren().setAll(work14);
                 }
@@ -181,7 +181,7 @@ public class WorkAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(30000),
+                Duration.millis(13000),
                 (ActionEvent event) -> {
                     work.getChildren().setAll(work15);
                 }
@@ -189,7 +189,7 @@ public class WorkAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(32000),
+                Duration.millis(14000),
                 (ActionEvent event) -> {
                     work.getChildren().setAll(work16);
                 }
@@ -197,7 +197,7 @@ public class WorkAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(34000),
+                Duration.millis(15000),
                 (ActionEvent event) -> {
                     work.getChildren().setAll(work17);
                 }
@@ -205,7 +205,7 @@ public class WorkAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(36000),
+                Duration.millis(16000),
                 (ActionEvent event) -> {
                     work.getChildren().setAll(work18);
                 }
@@ -213,7 +213,7 @@ public class WorkAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(38000),
+                Duration.millis(17000),
                 (ActionEvent event) -> {
                     work.getChildren().setAll(work19);
                 }
@@ -221,7 +221,7 @@ public class WorkAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(40000),
+                Duration.millis(18000),
                 (ActionEvent event) -> {
                     work.getChildren().setAll(work20);
                 }
@@ -229,7 +229,7 @@ public class WorkAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(42000),
+                Duration.millis(19000),
                 (ActionEvent event) -> {
                     work.getChildren().setAll(work21);
                 }
@@ -237,15 +237,17 @@ public class WorkAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(44000),
+                Duration.millis(20000),
                 (ActionEvent event) -> {
                     work.getChildren().setAll(work22);
                 }
         ));
 
+        t.play();
+
 
         final Group root = new Group(work);
-        animationStage.setScene(new Scene(root, 800, 800));
+        animationStage.setScene(new Scene(root, 850, 600));
         animationStage.show();
 
     }
