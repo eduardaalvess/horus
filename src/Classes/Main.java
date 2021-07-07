@@ -6,6 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class Main extends Application {
 
@@ -13,6 +14,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
 
         try {
+            primaryStage.initStyle(StageStyle.TRANSPARENT);
             Parent root = FXMLLoader.load(getClass().getResource("/FXML/Login.fxml"));
             primaryStage.setTitle("HORUS - Building yourself up");
             Image image = new Image("/Imagens/Other/icon-top.png");

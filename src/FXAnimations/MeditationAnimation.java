@@ -4,15 +4,67 @@ import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import javafx.util.Duration;
-
 import java.io.IOException;
 
 public class MeditationAnimation extends Application {
+
+    @FXML
+    private ImageView playImage;
+
+    @FXML
+    private AnchorPane meditationPane;
+
+    @FXML
+    private Button backButton;
+
+    @FXML
+    void startStopwatch(MouseEvent event) {
+
+        playImage.setPickOnBounds(true);
+        playImage.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                Alert a = new Alert(Alert.AlertType.INFORMATION);
+                a.setContentText("Parabéns! Nunca pensei hein!");
+                a.show();
+            }
+        });
+
+
+    }
+    @FXML
+    void backToMenu(ActionEvent event) throws IOException {
+
+        backButton.getScene().getWindow().hide();
+
+        Stage back = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("/FXML/HomePage.fxml"));
+        back.setTitle("HORUS - Building yourself up");
+        Image image = new Image("/Imagens/Other/icon-top.png");
+        back.getIcons().add(image);
+        back.initStyle(StageStyle.TRANSPARENT);
+        Scene scene = new Scene(root);
+        back.setScene(scene);
+        back.show();
+        back.setResizable(false);
+
+    }
+
 
     final static javafx.scene.image.Image MEDITATION1 = new javafx.scene.image.Image(MeditationAnimation.class.getResource("/Imagens/Meditating/med1.png").toString());
     final static javafx.scene.image.Image MEDITATION2 = new javafx.scene.image.Image(MeditationAnimation.class.getResource("/Imagens/Meditating/med2.png").toString());
@@ -141,16 +193,13 @@ public class MeditationAnimation extends Application {
 
         t.play();
 
-        final Group root = new Group(meditation);
+        Parent stopwatch = FXMLLoader.load(getClass().getResource("/FXML/Meditation.fxml"));
+
+        final Group root = new Group(meditation, stopwatch);
         animationStage.setScene(new Scene(root, 850, 600));
         animationStage.show();
 
     }
-
-    public static void main(String[] args) {
-        launch(args);
-    }
-
 
 
 }
