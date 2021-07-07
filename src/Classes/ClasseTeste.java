@@ -1,23 +1,21 @@
 package Classes;
 
 
+import FXAnimations.MeditationAnimation;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
 
-public class ClasseTeste extends Application{
+public class ClasseTeste extends MeditationAnimation {
 
     @Override
-    public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/FXML/Meditation.fxml"));
+    public void start(Stage primaryStage) {
 
-        Scene scene = new Scene(root);
-        primaryStage.setTitle("JavaFX");
 
-        primaryStage.setScene(scene);
-        primaryStage.show();
     }
 
 }
