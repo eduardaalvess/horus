@@ -2,13 +2,13 @@ package Models;
 
 public class Users {
 
-    String name, email, password, cpf, location;
+    String name, email, pass, cpf, location;
     int age, height;
 
-    public Users(String name, String email, String password, String cpf, String location, int age, int height) {
+    public Users(String name, String email, String pass, String cpf, String location, int age, int height) {
         this.name = name;
         this.email = email;
-        this.password = password;
+        this.pass = pass;
         this.cpf = cpf;
         this.location = location;
         this.age = age;
@@ -31,12 +31,12 @@ public class Users {
         this.email = email;
     }
 
-    public String getPassword() {
-        return password;
+    public String getPass() {
+        return pass;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setPass(String password) {
+        this.pass = pass;
     }
 
     public String getCpf() {

@@ -21,6 +21,7 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.util.Duration;
 import Database.DatabaseConfigs;
+import Models.Users;
 
 public class RegisterController implements Initializable {
 
@@ -54,20 +55,6 @@ public class RegisterController implements Initializable {
     @FXML
     private ImageView imageLoad;
 
-    @FXML
-    private RadioButton userMale;
-
-    @FXML
-    private RadioButton userWoman;
-
-    @FXML
-    private RadioButton userOthers;
-
-    @FXML
-    private ToggleGroup genders;
-
-    @FXML
-    private Label msgRegister;
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1)
@@ -79,25 +66,12 @@ public class RegisterController implements Initializable {
     @FXML
     public void registerAction(ActionEvent even) throws SQLException {
         imageLoad.setVisible(true);
+        validateRegister();
 
-        if(userEmail.getText().isBlank() == true || userPassword.getText().isBlank() == true) {
-            msgRegister.setText("Não é possivel realizar o cadastro");
-            imageLoad.setVisible(false);
-        } else {
-            validateRegister();
-            imageLoad.setVisible(false);
-
-            PauseTransition pt = new PauseTransition();
-            pt.setDuration(Duration.seconds(3));
-            pt.setOnFinished(event -> {
-                System.out.println("Cadastro realizado com sucesso!");
-            });
-
-            pt.play();
+        PauseTransition pt = new PauseTransition();
+        pt.setDuration(Duration.seconds(3));
+        pt.play();
         }
-
-
-    }
 
     @FXML
     public void loginAction(ActionEvent even1) throws IOException {
@@ -115,25 +89,6 @@ public class RegisterController implements Initializable {
         login.show();
     }
 
-    public String getGender()
-    {
-        String gen = "";
-        if(userMale.isSelected())
-        {
-            gen = "Homem";
-        }
-        else if(userWoman.isSelected())
-        {
-            gen = "Mulher";
-        }
-        else if(userOthers.isSelected())
-        {
-            gen = "Outro";
-        }
-
-        return gen;
-    }
-
     public void validateRegister() {
 
             DatabaseConfigs connectNow = new DatabaseConfigs();
@@ -147,6 +102,16 @@ public class RegisterController implements Initializable {
             String age = userAge.getText();
             String height = userHeight.getText();
 
+            if(name.isEmpty() || email.isEmpty() || pass.isEmpty() || cpf.isEmpty() || location.isEmpty() || age.isEmpty() || height.isEmpty()) {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setHeaderText(null);
+                alert.setContentText("Por favor, entre com todas as infomações");
+                imageLoad.setVisible(false);
+                alert.showAndWait();
+            }
+
+            else {
+
 
             String insertFields = "INSERT INTO usersinfo(name, email, pass, cpf, location, age, height) VALUES ('";
             String insertValues = name + "','" + email + "','" + pass + "','" + cpf + "','" + location + "','" + age + "','" + height + "')";
@@ -156,10 +121,9 @@ public class RegisterController implements Initializable {
                 Statement statement = connectDB.createStatement();
                 statement.executeUpdate(insertToRegister);
 
-                msgRegister.setText("Sucesso!");
-
             } catch (Exception ex) {
                 ex.printStackTrace();
             }
     }
+}
 }
