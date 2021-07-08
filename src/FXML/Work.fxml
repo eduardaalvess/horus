@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="meditationPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.StopwatchController">
+    <children>
+        <Button fx:id="backButton" layoutX="391.0" layoutY="548.0" mnemonicParsing="false" onAction="#backToMenu" opacity="0.5" style="-fx-background-color: #FFFFFF;" text="Voltar">
+            <font>
+                <Font name="Dungeon" size="15.0" />
+            </font>
+        </Button>
+        <Button fx:id="playButton" layoutX="375.0" layoutY="347.0" mnemonicParsing="false" onAction="#clickPlayButton" opacity="0.1" prefHeight="100.0" prefWidth="100.0" />
+        <Label fx:id="timer" alignment="CENTER" layoutX="150.0" layoutY="71.0" prefHeight="190.0" prefWidth="550.0" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font name="Dungeon" size="80.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

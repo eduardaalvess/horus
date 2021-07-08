@@ -4,7 +4,9 @@ import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
@@ -41,7 +43,7 @@ public class RunningAnimation extends Application {
         final ImageView run8 = new ImageView(RUN8);
 
         run = new Group(run1);
-        run.setTranslateX(200);
+        run.setTranslateX(350);
         run.setTranslateY(220);
 
         Timeline t = new Timeline();
@@ -97,12 +99,14 @@ public class RunningAnimation extends Application {
 
         t.play();
 
-        Rectangle sky = new Rectangle(600, 600);
+        Parent stopwatch = FXMLLoader.load(getClass().getResource("/FXML/Stopwatch.fxml"));
+
+        Rectangle sky = new Rectangle(850, 600);
         sky.setFill(Color.LIGHTBLUE);
 
-        final Group root = new Group(sky, run);
+        final Group root = new Group(sky,stopwatch, run);
 
-        animationStage.setScene(new Scene(root, 500, 500));
+        animationStage.setScene(new Scene(root, 850, 600));
         animationStage.setTitle("Teste");
         animationStage.show();
 

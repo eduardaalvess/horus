@@ -4,7 +4,9 @@ import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
@@ -181,7 +183,9 @@ public class ReadingAnimation extends Application {
 
         t.play();
 
-        final Group root = new Group(read);
+        Parent stopwatch = FXMLLoader.load(getClass().getResource("/FXML/Stopwatch.fxml"));
+
+        final Group root = new Group(read, stopwatch);
 
         animationStage.setScene(new Scene(root, 850, 600));
         animationStage.show();

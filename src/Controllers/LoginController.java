@@ -12,6 +12,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.fxml.FXML;
+import javafx.stage.StageStyle;
 import javafx.util.Duration;
 import java.io.IOException;
 import java.net.URL;
@@ -56,7 +57,7 @@ public class LoginController implements Initializable
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
-
+        horusImageView.setVisible(true);
         imageLoad.setVisible(false);
     }
 
@@ -93,6 +94,7 @@ public class LoginController implements Initializable
         register.getIcons().add(image);
         Scene scene = new Scene(root);
         register.setScene(scene);
+        register.initStyle(StageStyle.TRANSPARENT);
         register.show();
         register.setResizable(false);
     }
@@ -116,6 +118,7 @@ public class LoginController implements Initializable
         forgetPass.getIcons().add(image);
         Scene scene = new Scene(root);
         forgetPass.setScene(scene);
+        forgetPass.initStyle(StageStyle.TRANSPARENT);
         forgetPass.show();
         forgetPass.setResizable(false);
     }
@@ -146,6 +149,7 @@ public class LoginController implements Initializable
                     home.getIcons().add(image);
                     Scene scene = new Scene(root);
                     home.setScene(scene);
+                    home.initStyle(StageStyle.TRANSPARENT);
                     home.show();
                     home.setResizable(false);
 

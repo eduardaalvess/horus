@@ -4,7 +4,9 @@ import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
@@ -68,8 +70,8 @@ public class WorkAnimation extends Application {
 
 
         work = new Group(work1);
-        work.setTranslateX(-150);
-        work.setTranslateY(0);
+        work.setTranslateX(-350);
+        work.setTranslateY(-50);
 
         Timeline t = new Timeline();
         t.setCycleCount(Timeline.INDEFINITE);
@@ -245,8 +247,10 @@ public class WorkAnimation extends Application {
 
         t.play();
 
+        Parent stopwatch = FXMLLoader.load(getClass().getResource("/FXML/Stopwatch.fxml"));
 
-        final Group root = new Group(work);
+
+        final Group root = new Group(work, stopwatch);
         animationStage.setScene(new Scene(root, 850, 600));
         animationStage.show();
 

@@ -12,6 +12,8 @@ import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -88,6 +90,7 @@ public class HomePageController implements Initializable {
         login.getIcons().add(image);
         Scene scene = new Scene(root);
         login.setScene(scene);
+        login.initStyle(StageStyle.TRANSPARENT);
         login.show();
         login.setResizable(false);
     }

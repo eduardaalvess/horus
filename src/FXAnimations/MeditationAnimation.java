@@ -4,25 +4,14 @@ import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.media.Media;
-import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 import javafx.util.Duration;
 import java.io.IOException;
-import Classes.ClasseTeste;
 
 public class MeditationAnimation extends Application
 {
@@ -154,7 +143,7 @@ public class MeditationAnimation extends Application
 
         t.play();
 
-        Parent stopwatch = FXMLLoader.load(getClass().getResource("/FXML/Meditation.fxml"));
+        Parent stopwatch = FXMLLoader.load(getClass().getResource("/FXML/Stopwatch.fxml"));
 
         final Group root = new Group(meditation, stopwatch);
         animationStage.setScene(new Scene(root, 850, 600));

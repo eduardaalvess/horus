@@ -4,7 +4,9 @@ import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
@@ -580,7 +582,9 @@ public class StudyAnimation extends Application {
 
      t.play();
 
-     final Group root = new Group(study);
+     Parent stopwatch = FXMLLoader.load(getClass().getResource("/FXML/Stopwatch.fxml"));
+
+     final Group root = new Group(study, stopwatch);
 
      animationStage.setScene(new Scene(root, 850, 600));
      animationStage.setTitle("Teste Study");
