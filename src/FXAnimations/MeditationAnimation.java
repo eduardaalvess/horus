@@ -168,5 +168,4 @@ public class MeditationAnimation extends Application
         launch(args);
     }
 
-
 }

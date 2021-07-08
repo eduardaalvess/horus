@@ -2,7 +2,6 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
@@ -14,21 +13,10 @@
          </font>
       </Button>
       <Button fx:id="playButton" layoutX="375.0" layoutY="347.0" mnemonicParsing="false" onAction="#clickPlayButton" opacity="0.1" prefHeight="100.0" prefWidth="100.0" />
-      <Label fx:id="hourLabel" layoutX="202.0" layoutY="106.0" textFill="WHITE">
+      <Label fx:id="timer" alignment="CENTER" layoutX="150.0" layoutY="71.0" prefHeight="190.0" prefWidth="550.0" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Dungeon" size="80.0" />
          </font>
       </Label>
-      <Label fx:id="minLabel" layoutX="365.0" layoutY="106.0" textFill="WHITE">
-         <font>
-            <Font name="Dungeon" size="80.0" />
-         </font>
-      </Label>
-      <Label fx:id="secondsLabel" layoutX="529.0" layoutY="106.0" textFill="WHITE">
-         <font>
-            <Font name="Dungeon" size="80.0" />
-         </font>
-      </Label>
-      <ImageView fx:id="playImage" fitHeight="100.0" fitWidth="100.0" layoutX="375.0" layoutY="347.0" pickOnBounds="true" preserveRatio="true" />
    </children>
 </AnchorPane>
