@@ -71,7 +71,24 @@ public class RegisterController implements Initializable {
         PauseTransition pt = new PauseTransition();
         pt.setDuration(Duration.seconds(3));
         pt.play();
-        validateRegister();
+
+        String name = userName.getText();
+        String email = userEmail.getText();
+        String pass = userPassword.getText();
+        String cpf = userCPF.getText();
+        String location = userLocation.getText();
+        String age = userAge.getText();
+        String height = userHeight.getText();
+
+        if(name.isEmpty() || email.isEmpty() || pass.isEmpty() || cpf.isEmpty() || location.isEmpty() || age.isEmpty() || height.isEmpty()) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText(null);
+            alert.setContentText("Por favor, entre com todas as informações");
+            imageLoad.setVisible(false);
+            alert.showAndWait();
+        } else {
+            validateRegister();
+        }
         }
 
     @FXML
@@ -96,24 +113,9 @@ public class RegisterController implements Initializable {
             Connection connectDB = connectNow.getConnection();
             UserDAO dao = new UserDAO();
 
-            String name = userName.getText();
-            String email = userEmail.getText();
-            String pass = userPassword.getText();
-            String cpf = userCPF.getText();
-            String location = userLocation.getText();
-            String age = userAge.getText();
-            String height = userHeight.getText();
+            if(dao.create(userName.getText(), userEmail.getText(), userPassword.getText(), userCPF.getText(), userLocation.getText(), userAge.getText(), userHeight.getText())) {
 
-            if(name.isEmpty() || email.isEmpty() || pass.isEmpty() || cpf.isEmpty() || location.isEmpty() || age.isEmpty() || height.isEmpty()) {
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setHeaderText(null);
-                alert.setContentText("Por favor, entre com todas as informações");
-                imageLoad.setVisible(false);
-                alert.showAndWait();
-            }
-
-            else if(dao.create(userName.getText(), userEmail.getText(), userPassword.getText(), userCPF.getText(), userLocation.getText(), userAge.getText(), userHeight.getText())) {
-
+                System.out.println("Informações salvas com sucesso");
                     Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
                     alert.setHeaderText(null);
                     alert.setContentText("Informações salvas com sucesso!");
