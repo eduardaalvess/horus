@@ -15,40 +15,39 @@ import java.util.logging.Logger;
 
 public class UserDAO {
 
-    private Connection connect = null;
+    private Connection connect;
 
     public UserDAO() {
         connect = ConnectionFactory.getConnection();
     }
 
-    public boolean create(Users users) throws SQLException {
-
-        String sql = "INSERT INTO usersinfo (name, email, pass, cpf, location, age, height) VALUES (?,?,?,?,?,?,?) ";
+    public boolean create(String name, String email, String pass, String cpf, String location, String age, String height) {
 
         PreparedStatement statement = null;
 
         try {
-            statement = connect.prepareStatement(sql);
-            statement.setString(1, users.getName());
-            statement.setString(2, users.getEmail());
-            statement.setString(3, users.getPass());
-            statement.setString(4, users.getCpf());
-            statement.setString(5, users.getLocation());
-            statement.setInt(6, users.getAge());
-            statement.setInt(7, users.getHeight());
+            statement = connect.prepareStatement("INSERT INTO usersinfo (name, email, pass, cpf, location, age, height) VALUES (?,?,?,?,?,?,?) ");
+            statement.setString(1, name);
+            statement.setString(2, email);
+            statement.setString(3, pass);
+            statement.setString(4, cpf);
+            statement.setString(5, location);
+            statement.setString(6, age);
+            statement.setString(7, height);
 
             statement.executeUpdate();
 
-            return true;
+            System.out.println("Sucesso");
+
 
         } catch (SQLException sqlException) {
 
-            Logger.getLogger(UserDAO.class.getName()).log(Level.SEVERE, null, sqlException);
+            System.out.println(sqlException);
 
-            return false;
         } finally {
             ConnectionFactory.closeConnection(connect, statement);
         }
+        return false;
     }
 
 
@@ -104,7 +103,7 @@ public class UserDAO {
             statement.setInt(6, users.getAge());
             statement.setInt(7, users.getHeight());
 
-            statement.executeUpdate();
+            statement.executeQuery();
 
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
             alert.setHeaderText(null);

@@ -66,12 +66,12 @@ public class RegisterController implements Initializable {
 
     @FXML
     public void registerAction(ActionEvent even) throws IOException, SQLException {
-        imageLoad.setVisible(true);
-        validateRegister();
 
+        imageLoad.setVisible(true);
         PauseTransition pt = new PauseTransition();
         pt.setDuration(Duration.seconds(3));
         pt.play();
+        validateRegister();
         }
 
     @FXML
@@ -113,19 +113,27 @@ public class RegisterController implements Initializable {
 
             else {
 
-                try {
+                UserDAO dao = new UserDAO();
 
-                    Users users = new Users();
-                    UserDAO dao = new UserDAO();
+                if(dao.create(userName.getText(), userEmail.getText(), userPassword.getText(), userCPF.getText(), userLocation.getText(), userAge.getText(), userHeight.getText())) {
 
-                    dao.create(users);
-
-                } catch (SQLException sqlException) {
-                    System.out.println("Insucesso");
+                    userLogin.getScene().getWindow().hide();
+                    Stage registerLogin = new Stage();
+                    Parent root = FXMLLoader.load(getClass().getResource("/GUI/FXML/Login.fxml"));
+                    registerLogin.setTitle("HORUS - Building yourself up");
+                    registerLogin.setResizable(false);
+                    Image image = new Image("/Imagens/Other/icon-top.png");
+                    registerLogin.getIcons().add(image);
+                    registerLogin.initStyle(StageStyle.TRANSPARENT);
+                    Scene scene = new Scene(root);
+                    registerLogin.setScene(scene);
+                    registerLogin.show();
+                } else {
+                    System.out.println("Não conseguimos fazer seu cadastro");
                 }
 
 
-          //  String insertFields = "INSERT INTO usersinfo(name, email, pass, cpf, location, age, height) VALUES ('";
+                //  String insertFields = "INSERT INTO usersinfo(name, email, pass, cpf, location, age, height) VALUES ('";
           //  String insertValues = name + "','" + email + "','" + pass + "','" + cpf + "','" + location + "','" + age + "','" + height + "')";
           //  String insertToRegister = insertFields + insertValues;
 
