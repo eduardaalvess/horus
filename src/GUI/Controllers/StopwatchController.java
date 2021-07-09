@@ -44,8 +44,6 @@ public class StopwatchController implements Initializable {
     @FXML
     private Label timer;
 
-    @FXML
-    private ImageView playImage;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -64,6 +62,11 @@ public class StopwatchController implements Initializable {
     protected void clickPlayButton(ActionEvent event) {
         timeline.play();
         playButton.setDisable(true);
+
+        if(playButton.isDisable()) {
+            timeline.stop();
+            playButton.setDisable(false);
+        }
     }
 
     @FXML

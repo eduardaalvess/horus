@@ -153,14 +153,14 @@ public class StudyAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(5000),
+                Duration.millis(800),
                 (ActionEvent event) -> {
                     study.getChildren().setAll(study3);
                 }
         ));
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(10000),
+                Duration.millis(1000),
                 (ActionEvent event) -> {
                     study.getChildren().setAll(study4);
                 }
@@ -168,7 +168,7 @@ public class StudyAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(20000),
+                Duration.millis(1300),
                 (ActionEvent event) -> {
                     study.getChildren().setAll(study5);
                 }
@@ -176,7 +176,7 @@ public class StudyAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(30000),
+                Duration.millis(1800),
                 (ActionEvent event) -> {
                     study.getChildren().setAll(study6);
                 }
@@ -184,7 +184,7 @@ public class StudyAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(40000),
+                Duration.millis(2000),
                 (ActionEvent event) -> {
                     study.getChildren().setAll(study7);
                 }
@@ -192,7 +192,7 @@ public class StudyAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(50000),
+                Duration.millis(2500),
                 (ActionEvent event) -> {
                     study.getChildren().setAll(study8);
                 }
@@ -200,7 +200,7 @@ public class StudyAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(60000),
+                Duration.millis(3000),
                 (ActionEvent event) -> {
                     study.getChildren().setAll(study9);
                 }
@@ -208,7 +208,7 @@ public class StudyAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(70000),
+                Duration.millis(3500),
                 (ActionEvent event) -> {
                     study.getChildren().setAll(study10);
                 }
@@ -217,7 +217,7 @@ public class StudyAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(80000),
+                Duration.millis(4000),
                 (ActionEvent event) -> {
                     study.getChildren().setAll(study11);
                 }
@@ -225,7 +225,7 @@ public class StudyAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(90000),
+                Duration.millis(4500),
                 (ActionEvent event) -> {
                     study.getChildren().setAll(study12);
                 }
@@ -233,7 +233,7 @@ public class StudyAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(100000),
+                Duration.millis(5000),
                 (ActionEvent event) -> {
                     study.getChildren().setAll(study13);
                 }
@@ -241,7 +241,7 @@ public class StudyAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(110000),
+                Duration.millis(5500),
                 (ActionEvent event) -> {
                     study.getChildren().setAll(study14);
                 }
@@ -249,7 +249,7 @@ public class StudyAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(150000),
+                Duration.millis(6000),
                 (ActionEvent event) -> {
                     study.getChildren().setAll(study15);
                 }
@@ -257,7 +257,7 @@ public class StudyAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(160000),
+                Duration.millis(6500),
                 (ActionEvent event) -> {
                     study.getChildren().setAll(study16);
                 }
@@ -265,7 +265,7 @@ public class StudyAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(200000),
+                Duration.millis(7000),
                 (ActionEvent event) -> {
                     study.getChildren().setAll(study17);
                 }
@@ -273,7 +273,7 @@ public class StudyAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(220000),
+                Duration.millis(7500),
                 (ActionEvent event) -> {
                     study.getChildren().setAll(study18);
                 }
@@ -281,7 +281,7 @@ public class StudyAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(250000),
+                Duration.millis(8000),
                 (ActionEvent event) -> {
                     study.getChildren().setAll(study19);
                 }
@@ -289,7 +289,7 @@ public class StudyAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(300000),
+                Duration.millis(8500),
                 (ActionEvent event) -> {
                     study.getChildren().setAll(study20);
                 }
@@ -297,7 +297,7 @@ public class StudyAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(320000),
+                Duration.millis(9000),
                 (ActionEvent event) -> {
                     study.getChildren().setAll(study21);
                 }
@@ -305,7 +305,7 @@ public class StudyAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(350000),
+                Duration.millis(9500),
                 (ActionEvent event) -> {
                     study.getChildren().setAll(study22);
                 }
@@ -313,7 +313,7 @@ public class StudyAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(400000),
+                Duration.millis(10000),
                 (ActionEvent event) -> {
                     study.getChildren().setAll(study23);
                 }
@@ -321,7 +321,7 @@ public class StudyAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(450000),
+                Duration.millis(10500),
                 (ActionEvent event) -> {
                     study.getChildren().setAll(study24);
                 }
@@ -329,7 +329,7 @@ public class StudyAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(500000),
+                Duration.millis(11000),
                 (ActionEvent event) -> {
                     study.getChildren().setAll(study25);
                 }
@@ -337,7 +337,7 @@ public class StudyAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(550000),
+                Duration.millis(11500),
                 (ActionEvent event) -> {
                     study.getChildren().setAll(study26);
                 }
@@ -345,7 +345,7 @@ public class StudyAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(600000),
+                Duration.millis(12000),
                 (ActionEvent event) -> {
                     study.getChildren().setAll(study27);
                 }
@@ -353,14 +353,14 @@ public class StudyAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(650000),
+                Duration.millis(12500),
                 (ActionEvent event) -> {
                     study.getChildren().setAll(study28);
                 }
         ));
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(700000),
+                Duration.millis(13000),
                 (ActionEvent event) -> {
                     study.getChildren().setAll(study29);
                 }
@@ -368,7 +368,7 @@ public class StudyAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(710000),
+                Duration.millis(13500),
                 (ActionEvent event) -> {
                     study.getChildren().setAll(study30);
                 }
@@ -376,7 +376,7 @@ public class StudyAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(750000),
+                Duration.millis(14000),
                 (ActionEvent event) -> {
                     study.getChildren().setAll(study31);
                 }
@@ -384,7 +384,7 @@ public class StudyAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(800000),
+                Duration.millis(14500),
                 (ActionEvent event) -> {
                     study.getChildren().setAll(study32);
                 }
@@ -392,7 +392,7 @@ public class StudyAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(900000),
+                Duration.millis(15000),
                 (ActionEvent event) -> {
                     study.getChildren().setAll(study33);
                 }
@@ -400,7 +400,7 @@ public class StudyAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(930000),
+                Duration.millis(15500),
                 (ActionEvent event) -> {
                     study.getChildren().setAll(study34);
                 }
@@ -408,7 +408,7 @@ public class StudyAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(960000),
+                Duration.millis(16000),
                 (ActionEvent event) -> {
                     study.getChildren().setAll(study35);
                 }
@@ -416,7 +416,7 @@ public class StudyAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(990000),
+                Duration.millis(16500),
                 (ActionEvent event) -> {
                     study.getChildren().setAll(study36);
                 }
@@ -424,7 +424,7 @@ public class StudyAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(1000000),
+                Duration.millis(17000),
                 (ActionEvent event) -> {
                     study.getChildren().setAll(study37);
                 }
@@ -432,21 +432,21 @@ public class StudyAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(1030000),
+                Duration.millis(17500),
                 (ActionEvent event) -> {
                     study.getChildren().setAll(study38);
                 }
         ));
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(1090000),
+                Duration.millis(18000),
                 (ActionEvent event) -> {
                     study.getChildren().setAll(study39);
                 }
         ));
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(1120000),
+                Duration.millis(18500),
                 (ActionEvent event) -> {
                     study.getChildren().setAll(study40);
                 }
@@ -454,7 +454,7 @@ public class StudyAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(1190000),
+                Duration.millis(19000),
                 (ActionEvent event) -> {
                     study.getChildren().setAll(study41);
                 }
@@ -462,7 +462,7 @@ public class StudyAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(1220000),
+                Duration.millis(19500),
                 (ActionEvent event) -> {
                     study.getChildren().setAll(study42);
                 }
@@ -470,7 +470,7 @@ public class StudyAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(1280000),
+                Duration.millis(20000),
                 (ActionEvent event) -> {
                     study.getChildren().setAll(study43);
                 }
@@ -478,7 +478,7 @@ public class StudyAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(1340000),
+                Duration.millis(22000),
                 (ActionEvent event) -> {
                     study.getChildren().setAll(study44);
                 }
@@ -486,7 +486,7 @@ public class StudyAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(1400000),
+                Duration.millis(22500),
                 (ActionEvent event) -> {
                     study.getChildren().setAll(study45);
                 }
@@ -494,7 +494,7 @@ public class StudyAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(1450000),
+                Duration.millis(23000),
                 (ActionEvent event) -> {
                     study.getChildren().setAll(study46);
                 }
@@ -502,7 +502,7 @@ public class StudyAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(1470000),
+                Duration.millis(23500),
                 (ActionEvent event) -> {
                     study.getChildren().setAll(study47);
                 }
@@ -510,7 +510,7 @@ public class StudyAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(1500000),
+                Duration.millis(24000),
                 (ActionEvent event) -> {
                     study.getChildren().setAll(study48);
                 }
@@ -518,7 +518,7 @@ public class StudyAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(1530000),
+                Duration.millis(24500),
                 (ActionEvent event) -> {
                     study.getChildren().setAll(study49);
                 }
@@ -526,7 +526,7 @@ public class StudyAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(1560000),
+                Duration.millis(25000),
                 (ActionEvent event) -> {
                     study.getChildren().setAll(study50);
                 }
@@ -534,7 +534,7 @@ public class StudyAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(1590000),
+                Duration.millis(25500),
                 (ActionEvent event) -> {
                     study.getChildren().setAll(study51);
                 }
@@ -542,7 +542,7 @@ public class StudyAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(1640000),
+                Duration.millis(26000),
                 (ActionEvent event) -> {
                     study.getChildren().setAll(study52);
                 }
@@ -550,7 +550,7 @@ public class StudyAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(1700000),
+                Duration.millis(26500),
                 (ActionEvent event) -> {
                     study.getChildren().setAll(study53);
                 }
@@ -558,7 +558,7 @@ public class StudyAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(1730000),
+                Duration.millis(27000),
                 (ActionEvent event) -> {
                     study.getChildren().setAll(study54);
                 }
@@ -566,7 +566,7 @@ public class StudyAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(1760000),
+                Duration.millis(27500),
                 (ActionEvent event) -> {
                     study.getChildren().setAll(study55);
                 }
@@ -574,7 +574,7 @@ public class StudyAnimation extends Application {
 
 
         t.getKeyFrames().add(new KeyFrame(
-                Duration.millis(1765000),
+                Duration.millis(28000),
                 (ActionEvent event) -> {
                     study.getChildren().setAll(study56);
                 }
