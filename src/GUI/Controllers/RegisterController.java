@@ -1,6 +1,8 @@
 package GUI.Controllers;
 
 
+import Models.Beans.Users;
+import Models.DAO.UserDAO;
 import javafx.animation.PauseTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -8,6 +10,7 @@ import javafx.fxml.Initializable;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
@@ -62,7 +65,7 @@ public class RegisterController implements Initializable {
     }
 
     @FXML
-    public void registerAction(ActionEvent even) throws IOException {
+    public void registerAction(ActionEvent even) throws IOException, SQLException {
         imageLoad.setVisible(true);
         validateRegister();
 
@@ -87,7 +90,7 @@ public class RegisterController implements Initializable {
         login.show();
     }
 
-    public void validateRegister() throws IOException {
+    public void validateRegister() throws IOException, SQLException {
 
             ConnectionFactory connectNow = new ConnectionFactory();
             Connection connectDB = connectNow.getConnection();
@@ -110,21 +113,29 @@ public class RegisterController implements Initializable {
 
             else {
 
-            String insertFields = "INSERT INTO usersinfo(name, email, pass, cpf, location, age, height) VALUES ('";
-            String insertValues = name + "','" + email + "','" + pass + "','" + cpf + "','" + location + "','" + age + "','" + height + "')";
-            String insertToRegister = insertFields + insertValues;
+                try {
+
+                    Users users = new Users();
+                    UserDAO dao = new UserDAO();
+
+                    dao.create(users);
+
+                } catch (SQLException sqlException) {
+                    System.out.println("Insucesso");
+                }
 
 
-            try {
-                Statement statement = connectDB.createStatement();
-                statement.executeUpdate(insertToRegister);
+          //  String insertFields = "INSERT INTO usersinfo(name, email, pass, cpf, location, age, height) VALUES ('";
+          //  String insertValues = name + "','" + email + "','" + pass + "','" + cpf + "','" + location + "','" + age + "','" + height + "')";
+          //  String insertToRegister = insertFields + insertValues;
 
-            } catch (Exception ex) {
-                ex.printStackTrace();
+
+           // try {
+           //     Statement statement = connectDB.createStatement();
+           //     statement.executeUpdate(insertToRegister);
+
+            } // catch (Exception ex) {
+              //  ex.printStackTrace();
+              // }
             }
-            }
-    }
-
-
-
 }

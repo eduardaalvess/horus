@@ -2,6 +2,7 @@ package Models.DAO;
 
 import Database.ConnectionFactory;
 import Models.Beans.Users;
+import javafx.scene.control.Alert;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -88,6 +89,88 @@ public class UserDAO {
         return users;
     }
 
+    public void update(Users users) throws SQLException {
+
+        String sql = "UPDATE usersinfo SET name = ?, email = ?, pass = ?, location = ?, age = ?, height = ? WHERE cpf = ? ";
+
+        PreparedStatement statement = null;
+
+        try {
+            statement = connect.prepareStatement(sql);
+            statement.setString(1, users.getName());
+            statement.setString(2, users.getEmail());
+            statement.setString(3, users.getPass());
+            statement.setString(5, users.getLocation());
+            statement.setInt(6, users.getAge());
+            statement.setInt(7, users.getHeight());
+
+            statement.executeUpdate();
+
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setHeaderText(null);
+            alert.setContentText("Dados Atualizados com Sucesso!");
+
+        } catch (SQLException sqlException) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText(null);
+            alert.setContentText("Falha na atualização de dados!");
+        } finally {
+            ConnectionFactory.closeConnection(connect, statement);
+            }
+        }
+
+    public void updatePass(Users users) throws SQLException {
+
+        String sql = "UPDATE usersinfo SET pass = ? WHERE email = ? AND cpf = ? ";
+
+        PreparedStatement statement = null;
+
+        try {
+            statement = connect.prepareStatement(sql);
+            statement.setString(1, users.getPass());
+            statement.setString(2, users.getEmail());
+            statement.setString(3, users.getCpf());
+
+            statement.executeUpdate();
+
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setHeaderText(null);
+            alert.setContentText("Dados Atualizados com Sucesso!");
+
+        } catch (SQLException sqlException) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText(null);
+            alert.setContentText("Falha na atualização de dados!");
+        } finally {
+            ConnectionFactory.closeConnection(connect, statement);
+        }
+    }
+
+    public void delete(Users users) {
+
+        Connection connect = ConnectionFactory.getConnection();
+
+        PreparedStatement statement = null;
+
+        try {
+            statement = connect.prepareStatement("DELETE FROM produto WHERE cpf = ? AND pass");
+            statement.setString(1, users.getCpf());
+            statement.setString(2, users.getPass());
 
 
+            statement.executeUpdate();
+
+
+        } catch (SQLException sqlException) {
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setHeaderText(null);
+            alert.setContentText("Usuário deletado com Sucesso!");
+        } finally {
+            ConnectionFactory.closeConnection(connect, statement);
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText(null);
+            alert.setContentText("Ocorreu uma falha na exclusão do usuário");
+        }
+
+    }
 }
