@@ -94,6 +94,7 @@ public class RegisterController implements Initializable {
 
             ConnectionFactory connectNow = new ConnectionFactory();
             Connection connectDB = connectNow.getConnection();
+            UserDAO dao = new UserDAO();
 
             String name = userName.getText();
             String email = userEmail.getText();
@@ -111,39 +112,14 @@ public class RegisterController implements Initializable {
                 alert.showAndWait();
             }
 
-            else {
+            else if(dao.create(userName.getText(), userEmail.getText(), userPassword.getText(), userCPF.getText(), userLocation.getText(), userAge.getText(), userHeight.getText())) {
 
-                UserDAO dao = new UserDAO();
+                    Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+                    alert.setHeaderText(null);
+                    alert.setContentText("Informações salvas com sucesso!");
+                    alert.showAndWait();
 
-                if(dao.create(userName.getText(), userEmail.getText(), userPassword.getText(), userCPF.getText(), userLocation.getText(), userAge.getText(), userHeight.getText())) {
-
-                    userLogin.getScene().getWindow().hide();
-                    Stage registerLogin = new Stage();
-                    Parent root = FXMLLoader.load(getClass().getResource("/GUI/FXML/Login.fxml"));
-                    registerLogin.setTitle("HORUS - Building yourself up");
-                    registerLogin.setResizable(false);
-                    Image image = new Image("/Imagens/Other/icon-top.png");
-                    registerLogin.getIcons().add(image);
-                    registerLogin.initStyle(StageStyle.TRANSPARENT);
-                    Scene scene = new Scene(root);
-                    registerLogin.setScene(scene);
-                    registerLogin.show();
-                } else {
-                    System.out.println("Não conseguimos fazer seu cadastro");
                 }
 
-
-                //  String insertFields = "INSERT INTO usersinfo(name, email, pass, cpf, location, age, height) VALUES ('";
-          //  String insertValues = name + "','" + email + "','" + pass + "','" + cpf + "','" + location + "','" + age + "','" + height + "')";
-          //  String insertToRegister = insertFields + insertValues;
-
-
-           // try {
-           //     Statement statement = connectDB.createStatement();
-           //     statement.executeUpdate(insertToRegister);
-
-            } // catch (Exception ex) {
-              //  ex.printStackTrace();
-              // }
             }
-}
+    }
