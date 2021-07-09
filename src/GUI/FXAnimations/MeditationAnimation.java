@@ -146,15 +146,10 @@ public class MeditationAnimation extends Application
         Parent stopwatch = FXMLLoader.load(getClass().getResource("/GUI/FXML/Stopwatch.fxml"));
 
         final Group root = new Group(meditation, stopwatch);
-        animationStage.setScene(new Scene(root, 850, 600));
+        animationStage.setScene(new Scene(root, 850, 650));
         animationStage.show();
 
 
-    }
-
-
-    public static void main(String[] args) {
-        launch(args);
     }
 
 }

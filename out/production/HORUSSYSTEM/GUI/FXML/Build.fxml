@@ -7,24 +7,24 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="550.0" style="-fx-background-color: #171717;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controllers.BuildController">
+<AnchorPane fx:id="anchorBuild" prefHeight="600.0" prefWidth="550.0" style="-fx-background-color: #171717;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.Controllers.BuildController">
    <children>
-      <Button alignment="BOTTOM_CENTER" layoutX="37.0" layoutY="180.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: #ffc401;" text="Study" textAlignment="CENTER">
+      <Button fx:id="studyButton" alignment="BOTTOM_CENTER" layoutX="37.0" layoutY="180.0" mnemonicParsing="false" onAction="#pressStudyButton" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: #ffc401;" text="Study" textAlignment="CENTER">
          <font>
             <Font name="Dungeon" size="18.0" />
          </font>
       </Button>
-      <Button alignment="BOTTOM_CENTER" layoutX="317.0" layoutY="180.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: #ffc401;" text="Workout" textAlignment="CENTER" textFill="#171717">
+      <Button fx:id="workoutButton" alignment="BOTTOM_CENTER" layoutX="317.0" layoutY="180.0" mnemonicParsing="false" onAction="#pressWorkoutButton" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: #ffc401;" text="Workout" textAlignment="CENTER" textFill="#171717">
          <font>
             <Font name="Dungeon" size="18.0" />
          </font>
       </Button>
-      <Button alignment="BOTTOM_CENTER" layoutX="317.0" layoutY="388.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: #ffc401;" text="Mindfulness" textAlignment="CENTER">
+      <Button fx:id="mindfButton" alignment="BOTTOM_CENTER" layoutX="317.0" layoutY="388.0" mnemonicParsing="false" onAction="#pressMindfulnessButton" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: #ffc401;" text="Mindfulness" textAlignment="CENTER">
          <font>
             <Font name="Dungeon" size="18.0" />
          </font>
       </Button>
-      <Button alignment="BOTTOM_CENTER" layoutX="37.0" layoutY="388.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: #ffc401;" text="Work" textAlignment="CENTER">
+      <Button fx:id="workButton" alignment="BOTTOM_CENTER" layoutX="37.0" layoutY="388.0" mnemonicParsing="false" onAction="#pressWorkButton" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: #ffc401;" text="Work" textAlignment="CENTER">
          <font>
             <Font name="Dungeon" size="18.0" />
          </font>

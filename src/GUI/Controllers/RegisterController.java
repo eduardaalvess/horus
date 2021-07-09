@@ -64,7 +64,7 @@ public class RegisterController implements Initializable {
     }
 
     @FXML
-    public void registerAction(ActionEvent even) throws SQLException {
+    public void registerAction(ActionEvent even) throws IOException {
         imageLoad.setVisible(true);
         validateRegister();
 
@@ -89,7 +89,7 @@ public class RegisterController implements Initializable {
         login.show();
     }
 
-    public void validateRegister() {
+    public void validateRegister() throws IOException {
 
             DatabaseConfigs connectNow = new DatabaseConfigs();
             Connection connectDB = connectNow.getConnection();
@@ -105,17 +105,17 @@ public class RegisterController implements Initializable {
             if(name.isEmpty() || email.isEmpty() || pass.isEmpty() || cpf.isEmpty() || location.isEmpty() || age.isEmpty() || height.isEmpty()) {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setHeaderText(null);
-                alert.setContentText("Por favor, entre com todas as infomações");
+                alert.setContentText("Por favor, entre com todas as informações");
                 imageLoad.setVisible(false);
                 alert.showAndWait();
             }
 
             else {
 
-
             String insertFields = "INSERT INTO usersinfo(name, email, pass, cpf, location, age, height) VALUES ('";
             String insertValues = name + "','" + email + "','" + pass + "','" + cpf + "','" + location + "','" + age + "','" + height + "')";
             String insertToRegister = insertFields + insertValues;
+
 
             try {
                 Statement statement = connectDB.createStatement();
@@ -124,6 +124,9 @@ public class RegisterController implements Initializable {
             } catch (Exception ex) {
                 ex.printStackTrace();
             }
+            }
     }
-}
+
+
+
 }
