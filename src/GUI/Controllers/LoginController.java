@@ -112,7 +112,7 @@ public class LoginController implements Initializable
         forgotThePassword.getScene().getWindow().hide();
 
         Stage forgetPass = new Stage();
-        Parent root = FXMLLoader.load((getClass().getResource("/GUI/FXML/PasswordForget.fxml")));
+        Parent root = FXMLLoader.load((getClass().getResource("/GUI/FXML/ForgotPassword.fxml")));
         forgetPass.setTitle("HORUS - Building yourself up");
         Image image = new Image("/Imagens/Other/icon-top.png");
         forgetPass.getIcons().add(image);

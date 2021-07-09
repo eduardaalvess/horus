@@ -11,7 +11,7 @@ public class FXMLoader {
     public Pane getPage(String fileName) {
 
         try {
-            URL fileURL = SecondMain.class.getResource("/GUI/FXML/" + fileName + ".fxml");
+            URL fileURL = Main.class.getResource("/GUI/FXML/" + fileName + ".fxml");
 
             if(fileURL == null) {
                 throw new java.io.FileNotFoundException("Ops! Ocorreu um erro");

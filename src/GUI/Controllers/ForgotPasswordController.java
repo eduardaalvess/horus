@@ -1,10 +1,13 @@
 package GUI.Controllers;
 
+import Database.ConnectionFactory;
+import Models.DAO.UserDAO;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -13,8 +16,10 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.SQLException;
 
-public class ForgetPasswordController {
+public class ForgotPasswordController {
 
     @FXML
     private TextField forgetEmail;
@@ -26,13 +31,50 @@ public class ForgetPasswordController {
     private PasswordField newPassword;
 
     @FXML
-    private Button confirmNewPassword;
+    private Button confirmNewPasswordButton;
 
     @FXML
     private Button backToLogin;
 
     @FXML
     private Button cancelButton;
+
+    @FXML
+    public void confirmNewPassword() throws SQLException {
+
+        String email = forgetEmail.getText();
+        String cpf = forgetCPF.getText();
+        String newPass = newPassword.getText();
+
+        if(email.isEmpty() || cpf.isEmpty() || newPass.isEmpty()) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText(null);
+            alert.setContentText("Por favor, entre com todas as informações");
+            alert.showAndWait();
+        } else {
+            validateNewPass();
+        }
+    }
+
+    private void validateNewPass() throws SQLException {
+        ConnectionFactory connectNow = new ConnectionFactory();
+        Connection connectDB = connectNow.getConnection();
+        UserDAO dao = new UserDAO();
+
+        try {
+
+            if (dao.updatePass(newPassword.getText(), forgetEmail.getText(), forgetCPF.getText())) {
+
+                System.out.println("Informações salvas com sucesso");
+
+            }
+        } catch (SQLException sqlException) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText(null);
+            alert.setContentText("Falha na atualização de senha!");
+        }
+
+    }
 
 
     public void cancelStage(ActionEvent e2) throws IOException

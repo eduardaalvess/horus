@@ -37,7 +37,10 @@ public class UserDAO {
 
             statement.executeUpdate();
 
-            System.out.println("Sucesso");
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setHeaderText(null);
+            alert.setContentText("Informações salvas com sucesso! Clique em OK e volte para fazer login");
+            alert.showAndWait();
 
 
         } catch (SQLException sqlException) {
@@ -118,17 +121,16 @@ public class UserDAO {
             }
         }
 
-    public void updatePass(Users users) throws SQLException {
+    public boolean updatePass(String email, String cpf, String pass) throws SQLException {
 
-        String sql = "UPDATE usersinfo SET pass = ? WHERE email = ? AND cpf = ? ";
 
         PreparedStatement statement = null;
 
         try {
-            statement = connect.prepareStatement(sql);
-            statement.setString(1, users.getPass());
-            statement.setString(2, users.getEmail());
-            statement.setString(3, users.getCpf());
+            statement = connect.prepareStatement("UPDATE usersinfo SET pass = ? WHERE email = ? AND cpf = ? ");
+            statement.setString(1, pass);
+            statement.setString(2, email);
+            statement.setString(3, cpf);
 
             statement.executeUpdate();
 
@@ -143,6 +145,7 @@ public class UserDAO {
         } finally {
             ConnectionFactory.closeConnection(connect, statement);
         }
+        return false;
     }
 
     public void delete(Users users) {

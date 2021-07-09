@@ -1,7 +1,6 @@
 package GUI.Controllers;
 
 
-import Models.Beans.Users;
 import Models.DAO.UserDAO;
 import javafx.animation.PauseTransition;
 import javafx.event.ActionEvent;
@@ -11,7 +10,6 @@ import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.scene.Parent;
@@ -115,11 +113,8 @@ public class RegisterController implements Initializable {
 
             if(dao.create(userName.getText(), userEmail.getText(), userPassword.getText(), userCPF.getText(), userLocation.getText(), userAge.getText(), userHeight.getText())) {
 
-                System.out.println("Informações salvas com sucesso");
-                    Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-                    alert.setHeaderText(null);
-                    alert.setContentText("Informações salvas com sucesso!");
-                    alert.showAndWait();
+                System.out.println("Informações salvas com sucesso!");
+
 
                 }
 
