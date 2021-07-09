@@ -5,15 +5,6 @@ public class Users {
     String name, email, pass, cpf, location;
     int age, height;
 
-    public Users(String name, String email, String pass, String cpf, String location, int age, int height) {
-        this.name = name;
-        this.email = email;
-        this.pass = pass;
-        this.cpf = cpf;
-        this.location = location;
-        this.age = age;
-        this.height = height;
-    }
 
     public String getName() {
         return name;

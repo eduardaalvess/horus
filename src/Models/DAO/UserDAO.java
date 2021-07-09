@@ -5,7 +5,9 @@ import Models.Beans.Users;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -49,5 +51,43 @@ public class UserDAO {
     }
 
 
-    public List<Users> 
+    public List<Users> read() {
+
+        String sql = "SELECT * FROM usersinfo";
+
+        PreparedStatement statement = null;
+        ResultSet rs = null;
+
+        List<Users> users = new ArrayList<>();
+
+        try {
+            statement = connect.prepareStatement(sql);
+            rs = statement.executeQuery();
+
+            while (rs.next()) {
+
+                Users user = new Users();
+
+                user.setName(rs.getString("name"));
+                user.setEmail(rs.getString("email"));
+                user.setPass(rs.getString("pass"));
+                user.setCpf(rs.getString("cpf"));
+                user.setLocation(rs.getString("location"));
+                user.setAge(rs.getInt("age"));
+                user.setHeight(rs.getInt("height"));
+
+
+            }
+        } catch (SQLException sqlException) {
+            Logger.getLogger(UserDAO.class.getName()).log(Level.SEVERE, null, sqlException);
+        }
+        finally {
+            ConnectionFactory.closeConnection(connect, statement, rs);
+        }
+
+        return users;
+    }
+
+
+
 }
