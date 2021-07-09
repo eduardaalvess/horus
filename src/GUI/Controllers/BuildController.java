@@ -14,7 +14,7 @@ import javafx.stage.StageStyle;
 import java.io.IOException;
 
 
-public class BuildController extends MeditationAnimation {
+public class BuildController {
 
     @FXML
     private AnchorPane anchorBuild;

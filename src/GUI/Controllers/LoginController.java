@@ -1,6 +1,6 @@
 package GUI.Controllers;
 
-import Database.DatabaseConfigs;
+import Database.ConnectionFactory;
 import javafx.animation.PauseTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -125,7 +125,7 @@ public class LoginController implements Initializable
 
     public void validateLogin()
     {
-        DatabaseConfigs connectNow = new DatabaseConfigs();
+        ConnectionFactory connectNow = new ConnectionFactory();
         Connection connectDB = connectNow.getConnection();
 
         String verifyLogin = "SELECT count(1) FROM usersinfo WHERE email = '" + userEmail.getText() + "'AND pass = '" + userPassword.getText() + "'";

@@ -8,7 +8,6 @@ import javafx.fxml.Initializable;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
-import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
@@ -20,8 +19,7 @@ import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.util.Duration;
-import Database.DatabaseConfigs;
-import Models.Users;
+import Database.ConnectionFactory;
 
 public class RegisterController implements Initializable {
 
@@ -91,7 +89,7 @@ public class RegisterController implements Initializable {
 
     public void validateRegister() throws IOException {
 
-            DatabaseConfigs connectNow = new DatabaseConfigs();
+            ConnectionFactory connectNow = new ConnectionFactory();
             Connection connectDB = connectNow.getConnection();
 
             String name = userName.getText();

@@ -9,7 +9,7 @@ import java.sql.ResultSet;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class DatabaseConfigs {
+public class ConnectionFactory {
 
     private static final String DRIVER = "com.mysql.cj.jdbc.Driver";
     private static final String DBURL = "jdbc:mysql://localhost/horusdb";
@@ -41,7 +41,7 @@ public class DatabaseConfigs {
 
             } catch (SQLException ex)
             {
-                Logger.getLogger(DatabaseConfigs.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(ConnectionFactory.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
     }
@@ -58,7 +58,7 @@ public class DatabaseConfigs {
             }
         } catch (SQLException ex)
         {
-            Logger.getLogger(DatabaseConfigs.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ConnectionFactory.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -74,7 +74,7 @@ public class DatabaseConfigs {
             }
         } catch (SQLException ex)
         {
-            Logger.getLogger(DatabaseConfigs.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ConnectionFactory.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 

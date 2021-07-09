@@ -1,4 +1,4 @@
-package Models;
+package Models.Beans;
 
 public class Users {
 
