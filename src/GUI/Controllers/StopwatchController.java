@@ -62,11 +62,6 @@ public class StopwatchController implements Initializable {
     protected void clickPlayButton(ActionEvent event) {
         timeline.play();
         playButton.setDisable(true);
-
-        if(playButton.isDisable()) {
-            timeline.stop();
-            playButton.setDisable(false);
-        }
     }
 
     @FXML
